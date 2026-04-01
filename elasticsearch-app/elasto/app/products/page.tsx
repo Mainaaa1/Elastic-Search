@@ -1,4 +1,3 @@
-// Mark this file as a Client Component
 'use client';
 
 import React, { useEffect, useState } from 'react';

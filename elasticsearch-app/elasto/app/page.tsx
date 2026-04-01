@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <header className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white">
+      <header className="bg-linear-to-r from-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-6 py-20 text-center">
           <h1 className="text-5xl font-bold mb-4">Welcome to ElectroShop</h1>
           <p className="text-xl mb-8">
@@ -94,7 +94,7 @@ export default function Home() {
           {featuredProducts.map((product) => (
             <div
               key={product.id}
-              className="min-w-[250px] bg-white shadow rounded p-4 hover:shadow-lg transition flex-shrink-0"
+              className="min-w-62.5 bg-white shadow rounded p-4 hover:shadow-lg transition shrink-0"
             >
               <Image
                 src={product.image}

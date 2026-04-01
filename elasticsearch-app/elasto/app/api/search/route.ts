@@ -14,9 +14,9 @@ export async function GET(req: Request) {
   const result = await client.search({
     index: 'products',
     query: q
-      ? { match: { name: q } }  // search by name if query exists
-      : { match_all: {} },       // list all products if query is empty
-    size: 100, // increase if you have more than 10 products
+      ? { match: { name: q } }  
+      : { match_all: {} },       
+    size: 100, 
   });
 
   const hits = result.hits.hits.map((hit) => ({

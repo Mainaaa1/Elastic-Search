@@ -1,5 +1,3 @@
-// app/layout.tsx
-
 import Link from 'next/link';
 
 export default function RootLayout({
@@ -11,8 +9,12 @@ export default function RootLayout({
     <html lang="en">
       <body style={{ margin: 0, fontFamily: 'Arial, sans-serif' }}>
         
-        {/* Navbar */}
-        <nav style={navStyle}>
+        <nav style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          padding: '16px 24px',
+          borderBottom: '1px solid #eee'
+        }}>
           <h3>SearchApp</h3>
 
           <div>
@@ -23,22 +25,14 @@ export default function RootLayout({
           </div>
         </nav>
 
-        {/* Page Content */}
-        <main style={containerStyle}>{children}</main>
+        <main style={{
+          maxWidth: '900px',
+          margin: '0 auto',
+          padding: '24px'
+        }}>
+          {children}
+        </main>
       </body>
     </html>
   );
 }
-
-const navStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  padding: '16px 24px',
-  borderBottom: '1px solid #eee',
-};
-
-const containerStyle = {
-  maxWidth: '900px',
-  margin: '0 auto',
-  padding: '24px',
-};
